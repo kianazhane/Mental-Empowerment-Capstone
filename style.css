@@ -1,13 +1,17 @@
-.hero-wrapper .hero {
-  color: #F5F7F5;
+html {
+  font-family: Georgia, Helvetica, sans-serif;
+  overflow-x: scroll;
+  postion: absolute;
+  margin: 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+body {
+  color: #4d4e53;
+  line-height: 1.5;
+  font-family: Georgia, Helvetica, sans-serif;
+  background-color: #F3F0EC;
+    margin: 0;
 }
-
 
 .hero-wrapper {
   background-size: cover;
@@ -23,184 +27,70 @@
   position: relative;
 }
 
-body {
-  font-size: 1rem;
-  line-height: 28px;
+a:link {
+  color: white;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 2rem;
-  color: #4A4D4A;
+a:visited {
+  color: white;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #444444;
-  background-color: #FFFFFF;
-}
-
-body, input, select, textarea, button, .ui-btn {
-  font-size: 1em;
-  line-height: 1.3;
-  font-family: sans-serif;
-}
-
-html {
-  font-size: 16px;
-}
-
-html {
-  font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-html {
-  font-size: 100%;
-}
-
-
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-.hero-wrapper .button-inline-mobile-block a {
-  display: block;
-  margin: 0 auto 20px auto;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 20px;
-  margin-left: auto;
-}
-
-
-.hero-wrapper .button-inline-mobile-block a {
-  width: 180px;
-  height: auto;
-  line-height: 1.4em;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 9px;
-}
-
-
-
-
-
-/* :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
 a:hover {
-  color: #535bf2;
+  color: burlywood;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+a:active {
+  color: white;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+.content {
+  margin-left: 225px;
+  background-size: cover;
+  background-color: #ffffff;
+  width: 71%;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  min-height: 600px;
+  margin-top: -300px;
+  max-width: 1076px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+fieldset {
+  justify-content: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+legend {
+    justify-content: center;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
+.button {
+  display: inline-block;
+  background-image: linear-gradient(peru, sienna);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition-duration: 0.4s;
+  text-align: center;
+  position: relative;
+    cursor: pointer;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+.button:hover {
+  background-image: linear-gradient(sienna, peru);
+  color: white;
+}
+
+#round {
+  width: 200px;
+  border-radius: 50%;
+  float: left; 
+  margin-right: 0px;
+}
