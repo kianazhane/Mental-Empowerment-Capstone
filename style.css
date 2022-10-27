@@ -45,26 +45,23 @@ a:active {
 
 
 .content {
-  margin-left: 225px;
   background-size: cover;
-  background-color: #ffffff;
-  width: 71%;
-  padding: 30px;
-  justify-content: center;
+  min-height: 500px;
+  margin-top: -100px;
+  text-align: center;
   align-items: center;
-  position: absolute;
-  min-height: 600px;
-  margin-top: -300px;
-  max-width: 1076px;
+  position: relative;
+  text-align: center;
+  background-color: white;
+  margin-left: 225px;
+  margin: 0 0 0 0 0;
+  width: 71%;
+  padding: 1px;
 }
 
 fieldset {
   justify-content: center;
   text-align: center;
-}
-
-legend {
-    justify-content: center;
 }
 
 .button {
