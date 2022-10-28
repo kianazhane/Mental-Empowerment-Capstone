@@ -156,6 +156,19 @@ fieldset {
     cursor: pointer;
 }
 
+footer {
+  background-image: linear-gradient(peru, sienna);
+  overflow: hidden;
+  color: sienna;
+  background-size: cover;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
 #round {
   width: 200px;
   float: left; 
