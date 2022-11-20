@@ -14,3 +14,13 @@ dbReq.onsuccess = function(event) {
 dbReq.onerror = function(event) {
   alert('error opening database ' + event.target.errorCode);
 }
+
+function displayNotes(notes) {
+    let listHTML = '<ul>';
+    for (let i = 0; i < notes.length; i++) {
+      let note = notes[i];
+      listHTML += '<li>' + note.text + ' ' + 
+        new Date(note.timestamp).toString() + '</li>';
+    }
+    document.getElementById('notes').innerHTML = listHTML;
+  }
