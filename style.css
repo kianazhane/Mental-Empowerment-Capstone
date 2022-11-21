@@ -1,127 +1,22 @@
-html {
-  font-family: Georgia, Helvetica, sans-serif;
-  overflow-x: scroll;
-  postion: absolute;
-  margin: 0;
+* {
+	box-sizing: border-box;
 }
-
 body {
-  color: #4d4e53;
-  line-height: 1.5;
-  font-family: Georgia, Helvetica, sans-serif;
-  background-color: #F3F0EC;
+	font-family: 'Georgia', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  background-color: #EBE6D9;
+}
+ul {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-.heading {
-  background-image: linear-gradient(peru, sienna);
-  overflow: hidden;
-  color: burlywood;
-  background-size: cover;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-}
-
-.heading a:hover{
-    background-image: linear-gradient(sienna, peru);
-}
-
-#nav-links a {
-  float: center;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  margin: auto;
-}
-
-.dropbtn {
-  background-image: linear-gradient(peru, sienna);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
- 
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
- 
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
- 
-
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
-
-.hero-wrapper {
-  background-size: cover;
-  background-image: url("https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/health/wp-content/uploads/2022/07/family_therapy.jpeg");
-  min-height: 500px;
-  margin-top: -96px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  color: white;
-  margin-left: 225px;
-  margin: 0 0 0 0 0;
-  width: 71%;
-  opacity: 70%;
-}
-
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: burlywood;
-}
-
-a:active {
-  color: white;
-}
-
 
 .content {
-  background-size: cover;
-  min-height: 500px;
-  margin-top: -100px;
+  min-height: 600px;
+  margin-top: 0px;
   text-align: center;
   align-items: center;
   position: relative;
@@ -131,45 +26,105 @@ a:active {
   margin: 0 0 0 0 0;
   width: 71%;
   padding: 1px;
+  border-radius: 10px;
 }
 
-fieldset {
-  justify-content: center;
-  text-align: center;
-  width: 50%;
-  float: center;
+
+
+h2,
+h3,
+a {
+	color: #34495e;
 }
 
-.button {
-  display: inline-block;
-  background-image: linear-gradient(peru, sienna);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-  text-align: center;
-  position: relative;
-    cursor: pointer;
+a {
+	text-decoration: none;
 }
 
-footer {
-  background-image: linear-gradient(peru, sienna);
-  overflow: hidden;
-  color: sienna;
-  background-size: cover;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
+
+
+.logo {
+  width: 260px;
+	margin: 0;
+  padding-left: 10px;
+  padding-top: 2.2em;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.heading {
+  max-height: 450px;
+  margin-top: 1px;
+  text-align: center;
   align-items: center;
   position: relative;
   text-align: center;
+  background-color: white;
+  margin-left: 225px;
+  margin: 0 0 0 0 0;
+  width: 71%;
+  padding: .5px;
 }
 
-#round {
-  width: 200px;
-  float: left; 
+.main-nav {
+	margin-top: 5px;
+  text-align: center;
 }
+
+.main-nav a {
+	padding-left: 60px;
+  padding-right: 70px;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: white;
+	font-size: .90em;
+}
+
+.main-nav a:hover {
+	color: sienna;
+}
+
+
+.header {
+  max-height: 70px;
+  margin-top: 35px;;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #d0913f;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
