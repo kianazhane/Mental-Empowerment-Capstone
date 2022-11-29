@@ -8,6 +8,12 @@ body {
 	min-height: 100vh;
   background-color: #ffffff;
 }
+
+footer {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 15px;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -79,6 +85,15 @@ a {
   color: black;
 }
 
+#help {
+  width: 120px;
+  padding: 5px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  background-color: maroon;
+  color: white;
+}
 
 .content {
   min-height: 600px;
@@ -96,6 +111,21 @@ a {
 .content2 {
   opacity: 1%;
   min-height: 54px;
+}
+
+.content3 {
+  min-height: 600px;
+  min-height: 54px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+
+.familiar {
+  background-color: whitesmoke;
+  max-width: 50%;
+  margin-left: 25%;
 }
 
 .comingsoon {
@@ -118,14 +148,14 @@ a {
   background-color: #ffffff;
   margin-top: -50px;
   margin-bottom: -80px;
-  width: 100%;
+  width: 80%;
   padding: 1px;
   color: black;
 }
 
 .page2 {
   padding: 1em;
-  min-height: 300px;
+  min-height: 200px;
   text-align: center;
   align-items: center;
   text-align: center;
