@@ -9,11 +9,11 @@ dbReq.onupgradeneeded = function(event){
 
 db = event.target.result;
 
-//create object store in database to hold data/quotes stored
+//create object store in database to hold quotes stored
 let quotes = db.createObjectStore('quotes', {autoIncrement: true});
 }
 
-//need to add quotes
+//need to incorporate error catchers
 
 dbReq.onsuccess = function(event) {
   db = event.target.result;
@@ -24,23 +24,33 @@ dbReq.onerror = function(event){
 
 }
 
-//adding Quotes to the database
-function addQuote(db, message) {
-  let quote = db.transaction(['quotes'], 'readonly');
-  let store = quote.objectStores('quote');
+//adding quotes to the database
+function addQuotes() {
+  let quotes = db.transaction(['quotes'], 'readonly');
+  let store = quotes.objectStores('quotes');
 
 }
 
 
-//displaying quotes
-function displayNotes(quote) {
+//displaying data/quotes
+function displayQuotes(quotes) {
     let listHTML = '<ul>';
-    for (let i = 0; i < quote.length; i++) {
-      let quote = quote[i];
-      listHTML += '<li>' + quote.text + ' ' + 
+    for (let i = 0; i < quotes.length; i++) {
+      let data = data[i];
+      listHTML += '<li>' + quotes.text + ' ' + 
         new Date(note.timestamp).toString() + '</li>';
     }
+   
+const newQuote = document.getElementById('newQuote')
+newQuote.addEventListener('click', getQuote); 
+
+// new quote on button click
+window.onload = getData; 
+
+// new quote on page load
+    
     document.getElementById('quote').innerHTML = listHTML;
+  }
 
 
 
@@ -89,4 +99,4 @@ function displayNotes(notes) {
         new Date(note.timestamp).toString() + '</li>';
     }
     document.getElementById('notes').innerHTML = listHTML;
-  }
+  }*/

@@ -4,7 +4,7 @@ const url = 'https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&siz
 const menu = document.querySelector('header');
 const header = document.querySelector('main-nav');
 
-//document.getElementById("motivquotes").addEventListener("click", displayDate);
+//document.getElementById("quote").addEventListener("click", displayDate);
 
 //menu.addEventListener('click', function() {
   
