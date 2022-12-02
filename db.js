@@ -3,7 +3,7 @@ const fetchDataBtn = document.querySelector('#fetchdata')
     
 // gets data from API and sets the content of the div
   function getRandomQuote() {
-    return fetch("https://api.api-ninjas.com/v1/quotes?category=inspirational")
+    return fetch("https://animechan.vercel.app/api/random")
         .then(response => response.json())
         .then(({quote}) => quote)
 }
@@ -17,7 +17,4 @@ renderNewQuote()
     
     // add event listener for #fetchdata button
     fetchDataBtn.addEventListener('click', getRandomQuote)
-
-
-
 
