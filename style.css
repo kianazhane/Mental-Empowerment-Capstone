@@ -213,8 +213,19 @@ a {
   color: black;
 }
 
- button {
+
+button {
   background-color: maroon;
+  width: auto;
+  padding: 2px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+button a:hover {
+color: black;
 }
 
 
