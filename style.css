@@ -20,6 +20,9 @@ ul {
   list-style: none;
 }
 
+h1 {
+  color: maroon;
+}
 
 h2,
 h3,
@@ -50,15 +53,17 @@ a {
 	padding-top: .5em;
 	padding-bottom: .5em;
 	background-color: #D2B48C;
+  width: 100%;
 }
 
 .main-nav {
 	margin-top: 5px;
   text-align: center;
+  width: 100%;
 }
 
 .main-nav a {
-	padding-left: 60px;
+  padding-left: 60px;
   padding-right: 70px;
 	text-align: center;
 	display: block;
@@ -69,6 +74,14 @@ a {
 
 .main-nav a:hover {
 	color: sienna;
+}
+
+#newq a {
+  color: white;
+}
+
+#newq a:hover {
+  color: black;
 }
 
 #hotline {
@@ -93,6 +106,19 @@ a {
   text-align: center;
   background-color: maroon;
   color: white;
+}
+
+#help a:hover {
+  color: black;
+}
+
+#banner {
+  position: center;
+  width: 100%;
+}
+
+#img1 {
+  margin: auto;
 }
 
 .content {
@@ -144,11 +170,10 @@ a {
   min-height: 800px;
   text-align: center;
   align-items: center;
-  text-align: center;
   background-color: #ffffff;
   margin-top: -50px;
   margin-bottom: -80px;
-  width: 80%;
+  width: 100%;
   padding: 1px;
   color: black;
 }
@@ -164,25 +189,34 @@ a {
   color: white;
 }
 
-/* CSS for Dropdown */
-  input {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin: 0 auto;
-   }
+.page3 {
+  margin-top: 20px;
+  min-height: 200px;
+  text-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1px;
+  color: black;
+}
 
-  label {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin: 0 auto;
-   }
 
-  select {
-     margin-bottom: 10px;
-     margin-top: 10px;
-   }
+
+#quote-display {
+  width: 100%;
+  margin-top: 0;
+  padding-left: 60px;
+  padding-right: 70px;
+  align-items: center;
+	text-align: center;
+  background-color: white;
+  color: black;
+}
+
+ button {
+  background-color: maroon;
+}
+
 
 
 
@@ -213,5 +247,4 @@ a {
 	}
 
 }
-
 
