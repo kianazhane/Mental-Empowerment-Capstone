@@ -1,29 +1,45 @@
-// creating the button
-const fetchDataBtn = document.querySelector('#fetchdata')
-const fetchQuote = document.querySelector('#fetchQuote')
-    
-// gets data from API and sets the content of the div
-  function getRandomQuote() {
-    return fetch("https://animechan.vercel.app/api/random")
-        .then(response => response.json())
-        .then(({quote}) => quote)
-}
+/* to declaire variable */
 
-//render new quote
-async function renderNewQuote() {
-    document.getElementById('quote-display').textContent = await getRandomQuote()
-}
+function myQuote() {
+
+  /* used document.querySelect to get certain info from url */
+
+  //const quote = document.querySelector("#quote").value;
+  //const character = document.querySelector("#character").value;
+  const url = `https://animechan.vercel.app/api/random`;
+
+  console.log(url);
+
+  /* Get specific movie info from API result */
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+
+      /* specific info  */
+
+      const motivQuote = document.getElementById('quote');
+      const escapeQuote = escape(data.quote)
+      motivQuote.innerHTML = `
+    <div>
+    <h4>" <em>${data.quote}</em> "</h4>
+    <h5> -${data.character}</h5>
+    <button onclick = "addToIndexDB('${data.quote}')"
+        <p>Add to Favorites ♥</p>
+      </button>
+</div>
+    `;
+
+      console.log(data.quote);
+      console.log(data.character);
+    });
+  
+    // <button onclick = "addToIndexDB(\'${data.quote}\')"
+  
+};
 
 
-
-renderNewQuote()
-    
-    // add event listener for #fetchdata button
-    fetchDataBtn.addEventListener('click', getRandomQuote)
-
-
-
-    
 
 /*connecting to the database*/
 let db;
@@ -50,89 +66,54 @@ dbReq.onerror = function(event){
 }
 
 //adding quotes to the database
-function addQuotes() {
-  let quotes = db.transaction(['quotes'], 'readonly');
-  let store = quotes.objectStores('quotes');
+function addToIndexDB(quote) {
+  let quotes = db.transaction(['quotes'], 'readwrite');
+    console.log('step1')
+  let store = quotes.objectStore('quotes');
+    console.log(quote)
+  store.add(quote);
+    console.log('step3')
 
-}
-
-
-//displaying data/quotes
-function displayQuotes(quotes) {
-    let listHTML = '<ul>';
-    for (let i = 0; i < quotes.length; i++) {
-      let data = data[i];
-      listHTML += '<li>' + quotes.text + ' ' + 
-        new Date(note.timestamp).toString() + '</li>';
-    }
-   
-const newQuote = document.getElementById('newQuote')
-newQuote.addEventListener('click', getQuote); 
-
-var button = document.createElement('BUTTON');
-    //text to display on button
-    var text = document.createTextNode("Button");
-
-    // appending text to button
-    button.appendQuote(text);
-
-    // appending button to div
-    myDiv.appendQuote(button);
-
-    
-// new quote on button click
-window.onload = getData; 
-
-// new quote on page load
-    
-    document.getElementById('quote').innerHTML = listHTML;
+  
+// Wait for the database transaction to complete
+  quote.oncomplete = function() { console.log('stored note!') }
+  quote.onerror = function(event) {
+  alert('error storing note ' + event.target.errorCode);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*let db;
-let dbReq = indexedDB.open('myDatabase', 1);
-dbReq.onupgradeneeded = function(event) {
-  // Set the db variable to our database so we can use it!  
-  db = event.target.result;
-
-  // Create an object store named notes. Object stores
-  // in databases are where data are stored.
-  let notes = db.createObjectStore('notes', {autoIncrement: true});
-}
-dbReq.onsuccess = function(event) {
-  db = event.target.result;
-}
-dbReq.onerror = function(event) {
-  alert('error opening database ' + event.target.errorCode);
 }
 
-function displayNotes(notes) {
-    let listHTML = '<ul>';
-    for (let i = 0; i < notes.length; i++) {
-      let note = notes[i];
-      listHTML += '<li>' + note.text + ' ' + 
-        new Date(note.timestamp).toString() + '</li>';
-    }
-    document.getElementById('notes').innerHTML = listHTML;
-  }*/
+
+function showFavorites() {
+  // Set up an object store and transaction
+    let tx = db.transaction(['quotes'], 'readwrite');
+    let store = tx.objectStore('quotes');
+// Set up a request to get the sticky note with the key 1
+    let resp = store.getAll();
+// We can use the note if the request succeeds, getting it in the
+// onsuccess handler
+  
+  console.log(resp);
+
+  
+  resp.onsuccess = (event) => {
+     let listHTML = '<ul>';
+
+      for (var i = 0; i < resp.result.length; i++) {
+     //     console.log(resp.result[i])
+            let quote = resp.result[i];
+            listHTML += '<li>' + quote + ' ' 
+      }
+       
+            
+  document.getElementById('favs').innerHTML = listHTML;
+  
+  
+  
+// If we get an error, like that the note wasn't in the object
+// store, we handle the error in the onerror handler
+
+  }
+  resp.onerror = function(event) {
+  alert('error getting note 1 ' + event.target.errorCode);
+}
+}
