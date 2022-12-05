@@ -1,4 +1,7 @@
-* {
+const footerTemplate = document.createElement('template');
+footerTemplate.innerHTML = `
+
+<style>* {
 	box-sizing: border-box;
 }
 body {
@@ -154,17 +157,7 @@ a {
   margin-left: 25%;
 }
 
-.comingsoon {
-  min-height: 500px;
-  text-align: center;
-  align-items: center;
-  text-align: center;
-  background-color: #ffffff;
-  margin-bottom: -80px;
-  width: 100%;
-  padding: 1px;
-  color: black;
-}
+
 
 .page1 {
   min-height: 800px;
@@ -258,4 +251,27 @@ color: black;
 	}
 
 }
+</style>
+
+<footer>
+    Mental Empowerment ©<br>
+    <button id="help">
+      <a href="help.html">What Do I Do?</a>
+    </button>
+  </footer>
+  `
+
+class Footer extends HTMLElement {
+    constructor() {
+        // Always call super first in constructor
+        super();
+    }
+
+    connectedCallback() {
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+        shadowRoot.appendChild(footerTemplate.content);
+    }
+}
+
+customElements.define('footer-component', Footer);
 

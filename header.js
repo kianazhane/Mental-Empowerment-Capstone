@@ -1,4 +1,7 @@
-* {
+const headerTemplate = document.createElement('template');
+headerTemplate.innerHTML = `
+
+<style>* {
 	box-sizing: border-box;
 }
 body {
@@ -154,17 +157,7 @@ a {
   margin-left: 25%;
 }
 
-.comingsoon {
-  min-height: 500px;
-  text-align: center;
-  align-items: center;
-  text-align: center;
-  background-color: #ffffff;
-  margin-bottom: -80px;
-  width: 100%;
-  padding: 1px;
-  color: black;
-}
+
 
 .page1 {
   min-height: 800px;
@@ -258,4 +251,32 @@ color: black;
 	}
 
 }
+</style>
 
+
+
+<header class="header">
+		<a href="index.html"><img class="logo" src="https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/ME-Logo_Trasnparent.png?v=1667364696063" alt text="Mental Empowerment Logo"></a>
+      <ul class="main-nav">
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="mhprof.html">Mental Health Professionals</a></li>
+          <li><a href="motivquotes.html">Motivational Quotes</a></li>
+          <li><a href="supportgroup.html">Support Group</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+	</header> 
+  `
+
+class Header extends HTMLElement {
+    constructor() {
+        // Always call super first in constructor
+        super();
+    }
+
+    connectedCallback() {
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+        shadowRoot.appendChild(headerTemplate.content);
+    }
+}
+
+customElements.define('header-component', Header);
