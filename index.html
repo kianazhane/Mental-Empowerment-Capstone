@@ -4,53 +4,48 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/MentalEmpowerMent_Transparent.png?v=1667362227619">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/MentalEmpowerMent_Transparent.png?v=1667362227619"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
     <title>Mental Empowerment</title>
-  </head> 
+  </head>
 
   <button id="hotline">
-    <a href ="tel:988">24/7 Suicide & Crisis Lifeline</a>
+    <a href="tel:988">24/7 Suicide & Crisis Lifeline</a>
   </button>
-  
-	<header class="header">
-		<a href="index.html"><img class="logo" src="https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/ME-Logo_Trasnparent.png?v=1667364696063" alt text="Mental Empowerment Logo"></a>
-      <ul class="main-nav">
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="mhprof.html">Mental Health Professionals</a></li>
-          <li><a href="motivquotes.html">Motivational Quotes</a></li>
-          <li><a href="supportgroup.html">Support Group</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-	</header> 
-  
+
   <body>
-    <div class="content2"> . </div>
-      <div class="page1">
-      <img id="img1" src= "https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/page1.1.png?v=1668663087568">
+    <!--added header-component for custom element-->
+    <header-component></header-component>
+    <div class="content2">.</div>
+    <div class="page1">
+      <img
+        id="img1"
+        src="https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/page1.1.png?v=1668663087568"
+      />
     </div>
-    
+
     <div class="page2">
-        <form action="#">
-      <label for="diagnose"><h2>What can we help you with?</h2></label>
-      <select name="diagnosis" id="diagnose">
-        <option value="ASD">Autism</option>
-        <option value="ADHD">ADHD</option>
-        <option value="Alcohol Abuse">Alcohol Abuse</option>
-        <option value="Anxiety">Anxiety</option>
-        <option value="Bipolar">Bipolar</option>
-        <option value="Dyslexia">Dyslexia</option>
-        <option value="Drug Abuse">Drug Abuse</option>
-        <option value="OCD">OCD</option>
-      </select>
+      <form action="#">
+        <label for="diagnose"><h2>What can we help you with?</h2></label>
+        <select name="diagnosis" id="diagnose">
+          <option value="ASD">Autism</option>
+          <option value="ADHD">ADHD</option>
+          <option value="Alcohol Abuse">Alcohol Abuse</option>
+          <option value="Anxiety">Anxiety</option>
+          <option value="Bipolar">Bipolar</option>
+          <option value="Dyslexia">Dyslexia</option>
+          <option value="Drug Abuse">Drug Abuse</option>
+          <option value="OCD">OCD</option>
+        </select>
         <input type="submit" value="Submit" />
-</form>
+      </form>
     </div>
   </body>
-  <footer>
-    Mental Empowerment ©<br>
-    <button id="help">
-      <a href="help.html">What Do I Do?</a>
-    </button>
-  </footer>
+  <footer-component></footer-component>
 </html>
