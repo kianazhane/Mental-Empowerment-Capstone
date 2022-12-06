@@ -6,8 +6,9 @@
     <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/87fd6453-8096-4c78-95cd-c5eaeb146be0/MentalEmpowerMent_Transparent.png?v=1667362227619">
     <link rel="stylesheet" href="style.css">
     <title>Motivational Quotes</title>
-    <script type="module" src="motivquotes.js">
-    </script>
+    <script type="module" src="motivquotes.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>  
   </head> 
 
   <button id="hotline">
@@ -26,7 +27,7 @@
 	</header> 
 
 <body>
-  <!--replace header with reusable component and add script for header.js-->
+  <header-component></header-component>
   <div class="page3">
     <div id="quote"></div>
   <button id="newq" onclick = "myQuote()">
@@ -43,13 +44,6 @@
   </script>
   
 </div>
-  
-<footer>
-  <hr>
-  Mental Empowerment ©<br>
-  <button id="help">
-    <a href="help.html">What Do I Do?</a>
-  </button>
-</footer>
+<footer-component></footer-component> 
 </body>
   </html>
