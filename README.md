@@ -16,9 +16,9 @@ Three key features:
 Future goal - Segmentation to address each cultural segment in the marginalized community:	
 	1. Dedicated page for each cultural segment.
 		a. “Cheat Sheet” / “Where To Start” pages.
-		b.	Therapist, doctors, shelters
+		b. Therapist, doctors, shelters
 	2. API 
-	Curate information and build API’s specific to the cultural segments. (We could not find any when planning.
+	Curate information and build API’s specific to the cultural segments (We could not find any when planning).
 
 This website utilizes storing data in the IndexedDB. When viewing the Motivational Quotes tab, users are able to cycle through quotes that they like the best and save it as a favorite. They are then able to view all of their favorite quotes on a separate Favorites page.
 
